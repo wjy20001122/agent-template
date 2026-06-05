@@ -24,7 +24,8 @@ agent-template/
 │   └── basic/
 ├── docs/                         # 模板自身说明文档
 │   ├── design.md
-│   └── usage.md
+│   ├── usage.md
+│   └── migration.md
 └── scripts/
     └── create-project.sh
 ```
@@ -34,9 +35,9 @@ agent-template/
 ```bash
 git clone https://github.com/wjy20001122/agent-template.git
 cd agent-template
-bash scripts/create-project.sh my-new-project
+sh scripts/create-project.sh my-new-project
 cd my-new-project
-bash init.sh
+sh init.sh
 ```
 
 也可以直接复制模板目录：
@@ -44,7 +45,7 @@ bash init.sh
 ```bash
 cp -r template my-new-project
 cd my-new-project
-bash init.sh
+sh init.sh
 ```
 
 ## 生成后的项目结构
@@ -67,7 +68,7 @@ my-new-project/
 ## 分层原则
 
 - `template/`：真正复制到新项目里的内容。
-- `docs/`：本模板仓库自身的设计、使用说明。
+- `docs/`：本模板仓库自身的设计、使用、迁移说明。
 - `examples/`：示例项目。
 - `scripts/`：模板仓库工具脚本。
 - `template/docs/`：新项目自己的业务文档。
@@ -77,11 +78,12 @@ my-new-project/
 
 - [使用教程](docs/usage.md)
 - [设计说明](docs/design.md)
+- [迁移说明](docs/migration.md)
 
 ## 给 Agent 的推荐启动指令
 
 ```text
-请先阅读 AGENTS.md、CLAUDE.md、.harness/state/session-handoff.md、.harness/state/feature_list.json、.harness/logs/progress-log.md、.harness/decisions/decision-log.md、docs/requirements.m[...]
+请先阅读 AGENTS.md、CLAUDE.md、.harness/state/session-handoff.md、.harness/state/feature_list.json、.harness/logs/progress-log.md、.harness/decisions/decision-log.md、docs/requirements.md。
 然后只选择一个 TODO feature，先给实现计划，不要直接改代码。
 ```
 

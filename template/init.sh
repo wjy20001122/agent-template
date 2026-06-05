@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # 说明：
 # 初始化一个 AI Agent 友好的项目结构。
 # 注意：脚本只在文件不存在时创建，避免覆盖已有内容。
+# 该脚本使用 POSIX sh 写法，尽量不依赖 Bash，方便在最小 Linux 环境中运行。
 
-set -euo pipefail
+set -eu
 
 PROJECT_ROOT="$(pwd)"
 
@@ -16,8 +17,8 @@ mkdir -p .harness/state .harness/logs .harness/decisions .harness/checklists .ha
 touch src/.gitkeep apps/.gitkeep packages/.gitkeep tests/.gitkeep scripts/.gitkeep
 
 create_if_missing() {
-  local file_path="$1"
-  local content="$2"
+  file_path="$1"
+  content="$2"
 
   if [ ! -f "$file_path" ]; then
     printf "%s\n" "$content" > "$file_path"
