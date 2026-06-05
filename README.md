@@ -1,14 +1,14 @@
 # Agent Template
 
-> 一个简洁的 AI Agent 项目启动模板。
-
-本仓库采用清晰分层：`template/`、`docs/`、`examples/`、`scripts/` 分开存放，避免模板说明和新项目内容混在一起。
+> 一个轻量级 AI Agent Harness 新项目模板。
+>
+> 核心目标：把 **模板仓库自身内容** 和 **新项目模板内容** 分开，把 **项目业务文档** 和 **Agent 工作流状态** 分开，避免目录混乱。
 
 ## 目录结构
 
 ```text
 agent-template/
-├── README.md
+├── README.md                    # 说明这个模板怎么用
 ├── template/                     # 真正会复制到新项目里的模板内容
 │   ├── AGENTS.md
 │   ├── CLAUDE.md
@@ -20,9 +20,9 @@ agent-template/
 │   ├── scripts/
 │   ├── docs/
 │   └── .harness/
-├── examples/
+├── examples/                     # 示例项目
 │   └── basic/
-├── docs/
+├── docs/                         # 模板自身说明文档
 │   ├── design.md
 │   ├── usage.md
 │   └── migration.md
@@ -40,7 +40,15 @@ cd my-new-project
 bash init.sh
 ```
 
-## 生成后的新项目结构
+也可以直接复制模板目录：
+
+```bash
+cp -r template my-new-project
+cd my-new-project
+bash init.sh
+```
+
+## 生成后的项目结构
 
 ```text
 my-new-project/
@@ -48,18 +56,35 @@ my-new-project/
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── init.sh
-├── src/
-├── apps/
-├── packages/
-├── tests/
-├── scripts/
-├── docs/
-└── .harness/
+├── src/                         # 单体项目源码
+├── apps/                        # 多应用项目，例如 web / api / worker
+├── packages/                    # 公共包 / SDK / 共享模块
+├── tests/                       # 测试代码
+├── scripts/                     # 项目脚本
+├── docs/                        # 项目业务文档
+└── .harness/                    # AI Agent 工作流、状态、日志、决策、检查清单
 ```
 
-## 推荐 Agent 启动指令
+## 分层原则
+
+- `template/`：真正复制到新项目里的内容。
+- `docs/`：本模板仓库自身的设计、使用、迁移说明。
+- `examples/`：示例项目。
+- `scripts/`：模板仓库工具脚本。
+- `template/docs/`：新项目自己的业务文档。
+- `template/.harness/`：新项目里的 Agent Harness 管理区。
+
+## 详细文档
+
+- [使用教程](docs/usage.md)
+- [设计说明](docs/design.md)
+- [迁移说明](docs/migration.md)
+
+## 给 Agent 的推荐启动指令
 
 ```text
 请先阅读 AGENTS.md、CLAUDE.md、.harness/state/session-handoff.md、.harness/state/feature_list.json、.harness/logs/progress-log.md、.harness/decisions/decision-log.md、docs/requirements.md。
 然后只选择一个 TODO feature，先给实现计划，不要直接改代码。
 ```
+
+> Prompt 让 Agent 开始工作，Harness 让 Agent 可靠完成工作。
