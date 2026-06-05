@@ -47,7 +47,7 @@ init.sh                      # 初始化脚本
 
 ```bash
 # 初始化项目
-bash init.sh
+sh init.sh
 
 # 安装依赖
 {{INSTALL_COMMAND}}
