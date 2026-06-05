@@ -1,0 +1,33 @@
+{
+  "project": {
+    "name": "{{PROJECT_NAME}}",
+    "version": "0.1.0",
+    "stage": "MVP",
+    "owner": "{{OWNER}}",
+    "updated_at": "{{YYYY-MM-DD}}"
+  },
+  "features": [
+    {
+      "id": "F-001",
+      "name": "示例功能",
+      "description": "用一句话描述这个功能要解决什么问题。",
+      "priority": "P0",
+      "status": "TODO",
+      "module": "{{MODULE_NAME}}",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "用户可以完成核心操作",
+        "异常输入有明确提示",
+        "相关文档已更新"
+      ],
+      "tasks": [
+        {"id": "T-001-01", "title": "设计数据结构", "status": "TODO"},
+        {"id": "T-001-02", "title": "实现核心逻辑", "status": "TODO"},
+        {"id": "T-001-03", "title": "补充测试和文档", "status": "TODO"}
+      ],
+      "notes": "记录特殊约束、设计取舍、后续优化点。"
+    }
+  ],
+  "status_enum": ["TODO", "DOING", "BLOCKED", "DONE", "CANCELLED"],
+  "priority_enum": ["P0", "P1", "P2", "P3"]
+}

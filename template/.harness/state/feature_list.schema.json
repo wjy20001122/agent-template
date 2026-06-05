@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Feature List Schema",
+  "description": "用于约束 feature_list.json，保证 AI Agent 和人类开发者使用同一套功能状态结构。",
+  "type": "object",
+  "required": ["project", "features", "status_enum", "priority_enum"],
+  "properties": {
+    "project": {"type": "object", "required": ["name", "version", "stage", "owner", "updated_at"]},
+    "features": {
+      "type": "array",
+      "items": {"type": "object", "required": ["id", "name", "description", "priority", "status", "acceptance_criteria", "tasks"]}
+    },
+    "status_enum": {"type": "array"},
+    "priority_enum": {"type": "array"}
+  },
+  "additionalProperties": true
+}
