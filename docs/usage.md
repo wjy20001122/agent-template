@@ -5,9 +5,9 @@
 ```bash
 git clone https://github.com/wjy20001122/agent-template.git
 cd agent-template
-bash scripts/create-project.sh my-new-project
+sh scripts/create-project.sh my-new-project
 cd my-new-project
-bash init.sh
+sh init.sh
 ```
 
 或者直接复制模板：
@@ -15,7 +15,7 @@ bash init.sh
 ```bash
 cp -r template my-new-project
 cd my-new-project
-bash init.sh
+sh init.sh
 ```
 
 ## 2. 新项目优先填写顺序
@@ -57,3 +57,7 @@ bash init.sh
 5. 更新 feature_list、progress-log、session-handoff。
 6. 如有重要决策，更新 decision-log。
 ```
+
+## 6. 注意
+
+`scripts/create-project.sh` 和 `template/init.sh` 都使用 POSIX `sh` 写法，推荐用 `sh` 执行，避免最小 Linux 环境没有 Bash 时失败。
