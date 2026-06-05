@@ -5,7 +5,7 @@
 ## Quick Start
 
 ```bash
-bash init.sh
+sh init.sh
 {{INSTALL_COMMAND}}
 {{RUN_COMMAND}}
 ```

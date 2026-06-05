@@ -5,9 +5,9 @@
 建议流程：
 
 ```bash
-bash scripts/create-project.sh my-basic-project
+sh scripts/create-project.sh my-basic-project
 cd my-basic-project
-bash init.sh
+sh init.sh
 ```
 
 然后填写：
