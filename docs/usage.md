@@ -29,7 +29,7 @@ sh init.sh
 
 ## 3. 生成后建议替换的占位符
 
-创建项目并换以下占位符：
+创建项目后，建议优先搜索并替换以下占位符：
 
 - `{{PROJECT_NAME}}`：项目名称，`create-project.sh` 会自动替换基础位置。
 - `{{ONE_SENTENCE_GOAL}}`：一句话项目目标。
