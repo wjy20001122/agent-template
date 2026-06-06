@@ -1,0 +1,7 @@
+* text=auto
+*.sh eol=lf
+
+# Mark shell scripts as executable
+scripts/create-project.sh export-ignore
+scripts/validate-template.sh export-ignore
+template/init.sh export-ignore
