@@ -50,3 +50,10 @@
 7. `docs/requirements.md`
 
 然后只选择 **一个未完成 feature** 继续执行，不要同时扩散多个任务。
+
+## Recommended Next Prompt
+
+```text
+请继续基于当前 AGENTS.md、CLAUDE.md、.harness/state/session-handoff.md 和 .harness/state/feature_list.json 接着推进。
+请只处理 {{FEATURE_ID}}，先复述当前状态、阻塞点和计划，不要直接改代码。
+```
