@@ -74,6 +74,16 @@ my-new-project/
 - `template/docs/`：新项目自己的业务文档。
 - `template/.harness/`：新项目里的 Agent Harness 管理区。
 
+## 模板校验
+
+修改模板后，建议运行：
+
+```bash
+sh scripts/validate-template.sh
+```
+
+该命令会检查必要文件、Shell 语法、JSON 合法性，并实际生成一个临时项目执行 `init.sh`。
+
 ## 详细文档
 
 - [使用教程](docs/usage.md)
