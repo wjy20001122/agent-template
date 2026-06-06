@@ -24,8 +24,7 @@ agent-template/
 │   └── basic/
 ├── docs/                         # 模板自身说明文档
 │   ├── design.md
-│   ├── usage.md
-│   └── migration.md
+│   └── usage.md
 └── scripts/
     └── create-project.sh
 ```
@@ -68,7 +67,7 @@ my-new-project/
 ## 分层原则
 
 - `template/`：真正复制到新项目里的内容。
-- `docs/`：本模板仓库自身的设计、使用、迁移说明。
+- `docs/`：本模板仓库自身的设计、使用说明。
 - `examples/`：示例项目。
 - `scripts/`：模板仓库工具脚本。
 - `template/docs/`：新项目自己的业务文档。
@@ -88,12 +87,11 @@ sh scripts/validate-template.sh
 
 - [使用教程](docs/usage.md)
 - [设计说明](docs/design.md)
-- [迁移说明](docs/migration.md)
 
 ## 给 Agent 的推荐启动指令
 
 ```text
-请先阅读 AGENTS.md、CLAUDE.md、.harness/state/session-handoff.md、.harness/state/feature_list.json、.harness/logs/progress-log.md、.harness/decisions/decision-log.md、docs/requirements.md。
+请先阅读 AGENTS.md、CLAUDE.md、.harness/state/session-handoff.md、.harness/state/feature_list.json、.harness/logs/progress-log.md、.harness/decisions/decision-log.md、docs/requirements.m[...]
 然后只选择一个 TODO feature，先给实现计划，不要直接改代码。
 ```
 
