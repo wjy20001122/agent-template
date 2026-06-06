@@ -6,6 +6,14 @@
 
 set -eu
 
+# 依赖检查：当前脚本使用 python3 做占位符替换。
+# 说明：不用 sed 是为了避免项目名包含特殊字符时出现跨平台转义问题。
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "错误：create-project.sh 需要 python3，用于安全替换模板占位符。"
+  echo "请先安装 python3 后重试。"
+  exit 1
+fi
+
 # TARGET_DIR：用户希望创建的新项目目录，可以是相对路径，也可以是绝对路径。
 TARGET_DIR="${1:-}"
 

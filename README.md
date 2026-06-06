@@ -26,7 +26,8 @@ agent-template/
 │   ├── design.md
 │   └── usage.md
 └── scripts/
-    └── create-project.sh
+    ├── create-project.sh
+    └── validate-template.sh
 ```
 
 ## 快速开始

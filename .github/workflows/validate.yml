@@ -1,0 +1,17 @@
+name: Validate Template
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    name: Validate generated project template
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run template validation
+        run: sh scripts/validate-template.sh
